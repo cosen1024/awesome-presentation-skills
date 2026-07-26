@@ -1,5 +1,5 @@
 schema_version: 1
-catalog_version: 0.2.1
+catalog_version: 0.3.0
 last_verified: 2026-07-26
 verification_scope: >-
   Public GitHub repository, exact SKILL.md entry, first-party installation
@@ -223,6 +223,52 @@ skills:
     runtime_status: not-tested
     security_status: not-reviewed
     verified_at: 2026-07-26
+
+  - id: ryanbbrown-revealjs
+    category: html-slides
+    repository: ryanbbrown/revealjs-skill
+    repository_url: https://github.com/ryanbbrown/revealjs-skill
+    license: MIT
+    source_ref: d0ccd344c4aaf9f045e5a15be6a2ab67b595796f
+    skill: revealjs
+    skill_path: skills/revealjs/SKILL.md
+    source_url: https://github.com/ryanbbrown/revealjs-skill/blob/d0ccd344c4aaf9f045e5a15be6a2ab67b595796f/skills/revealjs/SKILL.md
+    install_url: https://github.com/ryanbbrown/revealjs-skill/blob/d0ccd344c4aaf9f045e5a15be6a2ab67b595796f/README.md
+    purpose_zh: 生成无需构建即可打开的 Reveal.js HTML 演示，支持主题、多栏布局、代码高亮、Chart.js、讲稿、动画、溢出检查、浏览器内文本编辑和 PDF 导出。
+    purpose_en: Creates no-build Reveal.js HTML decks with themes, multi-column layouts, code highlighting, Chart.js, speaker notes, animation, overflow checks, in-browser text editing, and PDF export.
+    platforms: [Claude Code]
+    outputs: [html, pdf]
+    editability: source-editable
+    capabilities: [generation, framework, charts, animation, speaker-notes, visual-review]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: 溢出检查、截图和 PDF 导出依赖 Playwright、DeckTape 与 Cheerio。
+    notes_en: Overflow checks, screenshots, and PDF export depend on Playwright, DeckTape, and Cheerio.
+
+  - id: sunbigfly-ppt-agent
+    category: html-slides
+    repository: sunbigfly/ppt-agent-skills
+    repository_url: https://github.com/sunbigfly/ppt-agent-skills
+    license: MIT
+    source_ref: 13e353776d0ba774eff7c423cc3e529cfe0adbeb
+    skill: ppt-agent
+    skill_path: SKILL.md
+    source_url: https://github.com/sunbigfly/ppt-agent-skills/blob/13e353776d0ba774eff7c423cc3e529cfe0adbeb/SKILL.md
+    install_url: https://github.com/sunbigfly/ppt-agent-skills/blob/13e353776d0ba774eff7c423cc3e529cfe0adbeb/README.md
+    purpose_zh: 以状态机和多 Agent 流程完成采访、检索或资料整理、叙事大纲、风格锁定、逐页 HTML 生成与视觉 QA，并导出 PNG 或 SVG 路线的 PPTX。
+    purpose_en: Uses a state machine and multi-agent workflow for intake, research or source synthesis, narrative outlining, style locking, per-slide HTML production, and visual QA before exporting PNG- or SVG-based PPTX decks.
+    platforms: [Agent Skills]
+    outputs: [html, png, pptx]
+    editability: partially-editable
+    capabilities: [generation, research, multi-agent, animation, visual-review, conversion]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: HTML 是逐页生产真源；完整流程依赖支持子 Agent 的运行环境，PPTX 分为光栅 PNG 与矢量 SVG 两条导出路线。
+    notes_en: Per-slide HTML is the production source; the full workflow requires a subagent-capable runtime and exports PPTX through separate raster PNG and vector SVG routes.
 
   - id: zarazhangrui-frontend-slides
     category: html-slides

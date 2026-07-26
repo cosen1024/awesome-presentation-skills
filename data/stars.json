@@ -1,6 +1,6 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-07-26T09:24:35Z",
+  "updated_at": "2026-07-26T09:34:54Z",
   "source": "github-rest-api",
   "stars": {
     "1weiho/open-slide": 5990,
@@ -21,6 +21,8 @@
     "ningzimu/image-to-editable-ppt-skill": 1600,
     "op7418/NanoBanana-PPT-Skills": 3161,
     "op7418/guizang-ppt-skill": 22381,
+    "ryanbbrown/revealjs-skill": 377,
+    "sunbigfly/ppt-agent-skills": 862,
     "tristan-mcinnis/pptx-from-layouts-skill": 8,
     "zarazhangrui/frontend-slides": 26352,
     "zl190/md-slides": 7
