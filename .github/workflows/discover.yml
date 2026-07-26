@@ -1,0 +1,31 @@
+name: Discover candidates
+
+on:
+  schedule:
+    - cron: "17 2 * * 2,5"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  discover:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-python@v7
+        with:
+          python-version: "3.12"
+          cache: pip
+          cache-dependency-path: requirements-dev.txt
+      - run: python -m pip install -r requirements-dev.txt
+      - name: Discover unverified repository leads
+        run: python scripts/discover_github.py
+        env:
+          GITHUB_TOKEN: ${{ github.token }}
+      - uses: actions/upload-artifact@v7
+        with:
+          name: presentation-skill-candidates
+          path: build/discovery/github-observations.json
+          if-no-files-found: error
+          retention-days: 14

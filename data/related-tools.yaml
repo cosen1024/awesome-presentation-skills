@@ -1,0 +1,15 @@
+schema_version: 1
+tools:
+  - id: trsdn-mcp-server-ppt
+    name: trsdn/mcp-server-ppt
+    type: mcp
+    url: https://github.com/trsdn/mcp-server-ppt
+    description_zh: 通过 Windows PowerPoint COM API 创建、编辑和导出演示的 MCP 服务器与 CLI；不是 Agent Skill。
+    description_en: MCP server and CLI for creating, editing, and exporting presentations through the Windows PowerPoint COM API; it is not an Agent Skill.
+  - id: zarazhangrui-beautiful-html-templates
+    name: zarazhangrui/beautiful-html-templates
+    type: templates
+    url: https://github.com/zarazhangrui/beautiful-html-templates
+    description_zh: HTML 演示模板集合；在确认具体可安装 Skill 前作为模板资源列出。
+    description_en: Collection of HTML presentation templates, listed as a resource until an exact installable Skill is verified.
+

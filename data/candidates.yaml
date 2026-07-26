@@ -1,0 +1,27 @@
+schema_version: 1
+candidates:
+  - id: revealjs-skill
+    name: revealjs-skill
+    state: needs-url
+    reason_zh: 用户提供了简称，但尚未能唯一定位到第一方仓库和具体 SKILL.md。
+    reason_en: The user supplied a short name, but a unique first-party repository and exact SKILL.md have not yet been identified.
+  - id: beautiful-html-templates
+    name: beautiful-html-templates
+    state: needs-verification
+    repository: zarazhangrui/beautiful-html-templates
+    repository_url: https://github.com/zarazhangrui/beautiful-html-templates
+    reason_zh: 已定位模板仓库，但尚需确认其中是否存在可独立安装的演示 Agent Skill。
+    reason_en: The template repository is known, but it still needs verification as an independently installable presentation Agent Skill.
+  - id: open-design
+    name: open-design
+    state: deferred
+    repository: nexu-io/open-design
+    repository_url: https://github.com/nexu-io/open-design
+    reason_zh: 这是更广泛的 AI 设计系统与 Skill 集合，需定位 presentation 专用 Skill 后再决定是否收录。
+    reason_en: This is a broader AI design system and skill collection; an exact presentation-specific Skill must be identified first.
+  - id: dash-ppt-skill
+    name: dashi-ppt-skill
+    state: needs-url
+    reason_zh: 名称来自截图，尚未获得可以核验的第一方仓库 URL。
+    reason_en: The name came from the supplied image, but no verifiable first-party repository URL is available yet.
+

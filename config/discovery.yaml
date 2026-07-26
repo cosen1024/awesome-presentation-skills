@@ -1,0 +1,20 @@
+schema_version: 1
+github:
+  per_page: 50
+  max_pages_per_query: 2
+  sort: updated
+  order: desc
+  queries:
+    - id: pptx-skill
+      query: pptx skill in:name,description,topics archived:false
+    - id: powerpoint-skill
+      query: powerpoint skill in:name,description,topics archived:false
+    - id: presentation-agent-skill
+      query: presentation agent-skill in:name,description,topics archived:false
+    - id: slides-claude-skill
+      query: slides claude-skill in:name,description,topics archived:false
+    - id: ppt-codex-skill
+      query: ppt codex-skill in:name,description,topics archived:false
+    - id: html-presentation-skill
+      query: html presentation skill in:name,description,topics archived:false
+

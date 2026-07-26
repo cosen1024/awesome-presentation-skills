@@ -1,0 +1,489 @@
+schema_version: 1
+catalog_version: 0.2.1
+last_verified: 2026-07-26
+verification_scope: >-
+  Public GitHub repository, exact SKILL.md entry, first-party installation
+  documentation, repository or skill-level license status, and an immutable
+  commit reference. Runtime execution, security review, output-quality testing,
+  and endorsement are outside this catalog version.
+
+categories:
+  - id: editable-pptx
+    name_zh: 可编辑 PPTX
+    name_en: Editable PPTX
+    description_zh: 主要工作流直接创建或编辑 PowerPoint 原生文本、形状、图表和其他对象。
+    description_en: Workflows that directly create or edit native PowerPoint text, shapes, charts, and other objects.
+  - id: html-slides
+    name_zh: HTML 演示
+    name_en: HTML Slides
+    description_zh: 以 HTML、CSS、JavaScript、Markdown 或前端组件作为权威演示源。
+    description_en: Workflows whose authoritative presentation source is HTML, CSS, JavaScript, Markdown, or frontend components.
+  - id: image-first
+    name_zh: 图片式 PPT
+    name_en: Image-first Presentations
+    description_zh: 先生成整页幻灯片图片，再封装为 PPTX、PDF、网页或视频。
+    description_en: Workflows that generate whole-slide images before packaging them as PPTX, PDF, web, or video outputs.
+
+skills:
+  - id: addsumtech-slide-maker
+    category: editable-pptx
+    repository: addsumtech/slides_maker
+    repository_url: https://github.com/addsumtech/slides_maker
+    license: MIT
+    source_ref: d1766cbf840a9f00e4c26cd08fef60a68f88bb39
+    skill: slide-maker
+    skill_path: skills/slide-maker/SKILL.md
+    source_url: https://github.com/addsumtech/slides_maker/blob/d1766cbf840a9f00e4c26cd08fef60a68f88bb39/skills/slide-maker/SKILL.md
+    install_url: https://github.com/addsumtech/slides_maker/blob/d1766cbf840a9f00e4c26cd08fef60a68f88bb39/README.md
+    purpose_zh: 从论文、代码或文档规划并生成原生可编辑 PPTX，包含模板适配、图表公式、讲稿和独立评审闭环。
+    purpose_en: Plans and builds natively editable PPTX decks from papers, code, or documents, with template matching, charts, equations, notes, and an independent review loop.
+    platforms: [Claude Code, Codex, OpenClaw]
+    outputs: [pptx]
+    editability: native-editable
+    capabilities: [generation, redesign, review, template, speaker-notes]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: 完整流程依赖 Python、LibreOffice 和 SVG 光栅化工具；仓库同时提供 ChatGPT GPT 入口。
+    notes_en: The full local workflow requires Python, LibreOffice, and an SVG rasterizer; the repository also offers a ChatGPT GPT entry.
+
+  - id: crazyykhllc-bit-cyber-ppt
+    category: editable-pptx
+    repository: crazyykhllc-bit/CyberPPT
+    repository_url: https://github.com/crazyykhllc-bit/CyberPPT
+    license: MIT
+    source_ref: 980e5576565f0673c67ee41b01d20ed66cb8417c
+    skill: cyber-ppt
+    skill_path: SKILL.md
+    source_url: https://github.com/crazyykhllc-bit/CyberPPT/blob/980e5576565f0673c67ee41b01d20ed66cb8417c/SKILL.md
+    install_url: https://github.com/crazyykhllc-bit/CyberPPT/blob/980e5576565f0673c67ee41b01d20ed66cb8417c/README.md
+    purpose_zh: 将文档、研究材料和业务数据经过证据表、故事线比较、SCR、风格确认与逐页蓝图，制作成主要文字和信息层可编辑的高密度咨询式 PPTX，并执行严格的结构与视觉 QA。
+    purpose_en: Turns documents, research materials, and business data into dense consulting-style PPTX decks through evidence tables, storyline comparison, SCR, style approval, and page-by-page blueprints, while keeping the primary text and information layers editable and enforcing strict structural and visual QA.
+    platforms: [Codex]
+    outputs: [pptx, png]
+    editability: partially-editable
+    capabilities: [generation, source-analysis, storyline, image-generation, validation, visual-review]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: 采用复杂视觉保真与主要文字可编辑的混合还原策略；复杂非文字视觉可保留为图片、SVG 或自定义几何，并要求逐页验收。
+    notes_en: Uses a hybrid reconstruction strategy that preserves complex visuals while keeping primary text editable; complex non-text visuals may remain as images, SVG, or custom geometry, with page-by-page acceptance required.
+
+  - id: anthropic-pptx
+    category: editable-pptx
+    repository: anthropics/skills
+    repository_url: https://github.com/anthropics/skills
+    license: Proprietary
+    source_ref: b29e7cf65e5cb78a5ac33d582270551bc74a14eb
+    skill: pptx
+    skill_path: skills/pptx/SKILL.md
+    source_url: https://github.com/anthropics/skills/blob/b29e7cf65e5cb78a5ac33d582270551bc74a14eb/skills/pptx/SKILL.md
+    install_url: https://github.com/anthropics/skills/blob/b29e7cf65e5cb78a5ac33d582270551bc74a14eb/README.md
+    purpose_zh: 面向 PPTX/POTX 的创建、读取、编辑、合并、拆分、模板处理、讲稿和评论操作，是 Claude 官方文档 Skill 基线。
+    purpose_en: Anthropic's document-skill baseline for creating, reading, editing, combining, splitting, templating, and inspecting PPTX/POTX files, notes, and comments.
+    platforms: [Claude Code, Claude.ai, Anthropic API]
+    outputs: [pptx]
+    editability: native-editable
+    capabilities: [generation, editing, reading, conversion, template, review]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: "`skills/pptx/LICENSE.txt` 使用专有条款，不是仓库级 MIT 许可。"
+    notes_en: "`skills/pptx/LICENSE.txt` contains proprietary terms rather than a repository-wide MIT license."
+
+  - id: minimax-pptx-generator
+    category: editable-pptx
+    repository: MiniMax-AI/skills
+    repository_url: https://github.com/MiniMax-AI/skills
+    license: MIT
+    source_ref: 60aaae52bb2af8162732751a4332f62a5fef518b
+    skill: pptx-generator
+    skill_path: skills/pptx-generator/SKILL.md
+    source_url: https://github.com/MiniMax-AI/skills/blob/60aaae52bb2af8162732751a4332f62a5fef518b/skills/pptx-generator/SKILL.md
+    install_url: https://github.com/MiniMax-AI/skills/blob/60aaae52bb2af8162732751a4332f62a5fef518b/README.md
+    purpose_zh: 使用 PptxGenJS 创建演示、通过 XML 工作流编辑现有 PPTX，并用 MarkItDown 提取内容。
+    purpose_en: Creates presentations with PptxGenJS, edits existing PPTX files through XML workflows, and extracts content with MarkItDown.
+    platforms: [Claude Code, Codex, Cursor, OpenCode]
+    outputs: [pptx]
+    editability: native-editable
+    capabilities: [generation, editing, reading, template]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+
+  - id: hugohe-ppt-master
+    category: editable-pptx
+    repository: hugohe3/ppt-master
+    repository_url: https://github.com/hugohe3/ppt-master
+    license: MIT
+    source_ref: de0af38a07706eee03b97f6186d8e0ffba595892
+    skill: ppt-master
+    skill_path: skills/ppt-master/SKILL.md
+    source_url: https://github.com/hugohe3/ppt-master/blob/de0af38a07706eee03b97f6186d8e0ffba595892/skills/ppt-master/SKILL.md
+    install_url: https://github.com/hugohe3/ppt-master/blob/de0af38a07706eee03b97f6186d8e0ffba595892/README.md
+    purpose_zh: 从文档、URL 和 Markdown 生成原生可编辑 PPTX，并支持品牌、布局、模板填充和现有演示增强路线。
+    purpose_en: Generates natively editable PPTX decks from documents, URLs, and Markdown, with routed workflows for brands, layouts, template filling, and deck enhancement.
+    platforms: [Claude Code, Codex]
+    outputs: [pptx]
+    editability: native-editable
+    capabilities: [generation, editing, template, conversion, review]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+
+  - id: noi1r-powerpoint-slides
+    category: editable-pptx
+    repository: Noi1r/powerpoint-skill
+    repository_url: https://github.com/Noi1r/powerpoint-skill
+    license: MIT
+    source_ref: a39cd8cfba332741a96d52bebd2bb378b638364e
+    skill: powerpoint-slides
+    skill_path: powerpoint-slides/SKILL.md
+    source_url: https://github.com/Noi1r/powerpoint-skill/blob/a39cd8cfba332741a96d52bebd2bb378b638364e/powerpoint-slides/SKILL.md
+    install_url: https://github.com/Noi1r/powerpoint-skill/blob/a39cd8cfba332741a96d52bebd2bb378b638364e/README.md
+    purpose_zh: 为论文、研究笔记和技术内容生成 PPTX，重点支持原生公式、多种图示管线、学术结构与视觉 QA。
+    purpose_en: Builds PPTX decks from papers, research notes, and technical content, emphasizing native equations, multiple diagram pipelines, academic structure, and visual QA.
+    platforms: [Claude Code]
+    outputs: [pptx]
+    editability: native-editable
+    capabilities: [generation, academic, equations, diagrams, review]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: 完整能力需要 Node.js、Pandoc、TeX、Graphviz、LibreOffice 等本地依赖。
+    notes_en: The full workflow requires local dependencies including Node.js, Pandoc, TeX, Graphviz, and LibreOffice.
+
+  - id: ningzimu-image-to-editable-ppt
+    category: editable-pptx
+    repository: ningzimu/image-to-editable-ppt-skill
+    repository_url: https://github.com/ningzimu/image-to-editable-ppt-skill
+    license: MIT
+    source_ref: dfc461b05982ab5b3605c3bb2626a7d54ee80155
+    skill: image-to-editable-ppt
+    skill_path: skills/image-to-editable-ppt/SKILL.md
+    source_url: https://github.com/ningzimu/image-to-editable-ppt-skill/blob/dfc461b05982ab5b3605c3bb2626a7d54ee80155/skills/image-to-editable-ppt/SKILL.md
+    install_url: https://github.com/ningzimu/image-to-editable-ppt-skill/blob/dfc461b05982ab5b3605c3bb2626a7d54ee80155/README.md
+    purpose_zh: 把图片、扫描 PDF 和图片版 PPTX 分解并重建为对象级可编辑 PowerPoint，恢复文本、简单形状、独立视觉资产和页面备注。
+    purpose_en: Reconstructs images, scanned PDFs, and image-based PPTX decks into object-level editable PowerPoint slides with native text, simple shapes, separate visual assets, and notes.
+    platforms: [Codex]
+    outputs: [pptx]
+    editability: native-editable
+    capabilities: [reconstruction, editing, ocr, visual-review, speaker-notes]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: 多页重建依赖子 Agent、editppt、OCR 和图片生成或编辑后端，成本高于普通图片式 PPT 生成。
+    notes_en: Multi-page reconstruction depends on subagents, editppt, OCR, and image-generation or editing backends, with higher cost than ordinary image-first generation.
+
+  - id: tristan-pptx-from-layouts
+    category: editable-pptx
+    repository: tristan-mcinnis/pptx-from-layouts-skill
+    repository_url: https://github.com/tristan-mcinnis/pptx-from-layouts-skill
+    license: MIT
+    source_ref: 53b0e750694d807e3510c2017744197c3c5089b0
+    skill: pptx-from-layouts
+    skill_path: .claude/skills/pptx-from-layouts/SKILL.md
+    source_url: https://github.com/tristan-mcinnis/pptx-from-layouts-skill/blob/53b0e750694d807e3510c2017744197c3c5089b0/.claude/skills/pptx-from-layouts/SKILL.md
+    install_url: https://github.com/tristan-mcinnis/pptx-from-layouts-skill/blob/53b0e750694d807e3510c2017744197c3c5089b0/README.md
+    purpose_zh: 将 Markdown 大纲映射到企业模板真实的 Slide Master 布局和占位符，支持模板画像、语义布局选择、局部编辑与结果校验。
+    purpose_en: Maps Markdown outlines onto a corporate template's real Slide Master layouts and placeholders, with template profiling, semantic layout selection, surgical editing, and validation.
+    platforms: [Claude Code, Codex, OpenCode]
+    outputs: [pptx]
+    editability: native-editable
+    capabilities: [generation, editing, template, validation]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+
+  - id: kdnsna-ultimate-ppt-master
+    category: editable-pptx
+    repository: kdnsna/ultimate-ppt-master-skill
+    repository_url: https://github.com/kdnsna/ultimate-ppt-master-skill
+    license: MIT
+    source_ref: 1749ad4587e78972493b1978816092210215072a
+    skill: ultimate-ppt-master
+    skill_path: SKILL.md
+    source_url: https://github.com/kdnsna/ultimate-ppt-master-skill/blob/1749ad4587e78972493b1978816092210215072a/SKILL.md
+    install_url: https://github.com/kdnsna/ultimate-ppt-master-skill/blob/1749ad4587e78972493b1978816092210215072a/README.md
+    purpose_zh: 从 PDF、Word、URL、Markdown 或既有 PPTX 建立本地演示项目，按交付场景生成可编辑 PPTX、杂志风网页演示或双交付，并包含预览与质量门禁。
+    purpose_en: Turns PDFs, Word files, URLs, Markdown, or existing PPTX decks into local presentation projects that deliver editable PPTX, magazine-style web decks, or both, with previews and quality gates.
+    platforms: [Codex, Claude Code, Cursor, OpenClaw, Hermes]
+    outputs: [pptx, html]
+    editability: native-editable
+    capabilities: [generation, editing, template, conversion, visual-review]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+
+  - id: zarazhangrui-frontend-slides
+    category: html-slides
+    repository: zarazhangrui/frontend-slides
+    repository_url: https://github.com/zarazhangrui/frontend-slides
+    license: MIT
+    source_ref: 9906a34d640d2111f724544cbc50f7f130569ae1
+    skill: frontend-slides
+    skill_path: SKILL.md
+    source_url: https://github.com/zarazhangrui/frontend-slides/blob/9906a34d640d2111f724544cbc50f7f130569ae1/SKILL.md
+    install_url: https://github.com/zarazhangrui/frontend-slides/blob/9906a34d640d2111f724544cbc50f7f130569ae1/README.md
+    purpose_zh: 创建零依赖、动画丰富的单文件 HTML 演示，也能把 PowerPoint 内容转换为网页幻灯片，并通过视觉预览帮助选择风格。
+    purpose_en: Creates zero-dependency, animation-rich single-file HTML presentations, converts PowerPoint content to web slides, and uses visual previews for style selection.
+    platforms: [Claude Code, Codex, Kimi Code, OpenCode, Gemini CLI]
+    outputs: [html, pdf]
+    editability: source-editable
+    capabilities: [generation, conversion, animation, visual-preview]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+
+  - id: op7418-guizang-ppt-skill
+    category: html-slides
+    repository: op7418/guizang-ppt-skill
+    repository_url: https://github.com/op7418/guizang-ppt-skill
+    license: AGPL-3.0
+    source_ref: 929c2ecb63a22b54d400c4911ed70bf96c2b355d
+    skill: guizang-ppt-skill
+    skill_path: SKILL.md
+    source_url: https://github.com/op7418/guizang-ppt-skill/blob/929c2ecb63a22b54d400c4911ed70bf96c2b355d/SKILL.md
+    install_url: https://github.com/op7418/guizang-ppt-skill/blob/929c2ecb63a22b54d400c4911ed70bf96c2b355d/README.en.md
+    purpose_zh: 生成横向翻页的单文件 HTML 演示，主打电子杂志与瑞士国际主义风格，并包含模板、动效和演示运行时。
+    purpose_en: Generates horizontal-swipe single-file HTML decks with editorial-magazine and Swiss International styles, templates, motion, and a presentation runtime.
+    platforms: [Claude Code, Codex, Cursor]
+    outputs: [html]
+    editability: source-editable
+    capabilities: [generation, template, animation, visual-assets]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+
+  - id: codesstar-next-slide
+    category: html-slides
+    repository: codesstar/next-slide
+    repository_url: https://github.com/codesstar/next-slide
+    license: MIT
+    source_ref: e92c1b2506e6cf5acff7d2b92339ba0c0ce2af22
+    skill: next-slide
+    skill_path: SKILL.md
+    source_url: https://github.com/codesstar/next-slide/blob/e92c1b2506e6cf5acff7d2b92339ba0c0ce2af22/SKILL.md
+    install_url: https://github.com/codesstar/next-slide/blob/e92c1b2506e6cf5acff7d2b92339ba0c0ce2af22/README.md
+    purpose_zh: 用自然语言创建零依赖 HTML 演示或转换 PPT 内容，提供多种风格、双语支持和场景脚手架。
+    purpose_en: Creates zero-dependency HTML presentations or converts PPT content from natural-language requests, with curated styles, bilingual support, and scenario scaffolds.
+    platforms: [Claude Code, Hermes Agent, OpenClaw]
+    outputs: [html]
+    editability: source-editable
+    capabilities: [generation, conversion, bilingual, template, speaker-notes]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+
+  - id: lewislulu-html-ppt-skill
+    category: html-slides
+    repository: lewislulu/html-ppt-skill
+    repository_url: https://github.com/lewislulu/html-ppt-skill
+    license: MIT
+    source_ref: f3a8435d3901697d5ac5e64d356c933637e43107
+    skill: html-ppt
+    skill_path: SKILL.md
+    source_url: https://github.com/lewislulu/html-ppt-skill/blob/f3a8435d3901697d5ac5e64d356c933637e43107/SKILL.md
+    install_url: https://github.com/lewislulu/html-ppt-skill/blob/f3a8435d3901697d5ac5e64d356c933637e43107/README.md
+    purpose_zh: 以主题、整套模板、页面布局、CSS/Canvas 动画、讲稿、计时器和演讲者模式批量组织静态 HTML 幻灯片。
+    purpose_en: Produces static HTML decks from themes, full-deck templates, page layouts, CSS/Canvas animations, speaker scripts, timers, and presenter mode.
+    platforms: [Agent Skills]
+    outputs: [html, png]
+    editability: source-editable
+    capabilities: [generation, template, animation, speaker-notes, presenter-mode]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+
+  - id: alchaincyf-huashu-design
+    category: html-slides
+    repository: alchaincyf/huashu-design
+    repository_url: https://github.com/alchaincyf/huashu-design
+    license: MIT
+    source_ref: 3b1d873575c17e6b350b4887c8416860a11ffd30
+    skill: huashu-design
+    skill_path: SKILL.md
+    source_url: https://github.com/alchaincyf/huashu-design/blob/3b1d873575c17e6b350b4887c8416860a11ffd30/SKILL.md
+    install_url: https://github.com/alchaincyf/huashu-design/blob/3b1d873575c17e6b350b4887c8416860a11ffd30/README.en.md
+    purpose_zh: 用 HTML 完成高保真幻灯片、原型、动画和可视化，要求先输出三个真实设计方向，再进入制作、评审和导出流程。
+    purpose_en: Uses HTML for high-fidelity slides, prototypes, motion, and visualization, with a mandatory three-direction design gate before production, review, and export.
+    platforms: [Claude Code, Codex, Cursor, OpenClaw, Hermes]
+    outputs: [html, pptx, mp4, gif]
+    editability: source-editable
+    capabilities: [generation, animation, visual-review, conversion]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: PPTX 是 HTML 工作流的导出结果，因此主分类仍为 HTML 演示。
+    notes_en: PPTX is an export of the HTML workflow, so the primary category remains HTML Slides.
+
+  - id: open-slide-create-slide
+    category: html-slides
+    repository: 1weiho/open-slide
+    repository_url: https://github.com/1weiho/open-slide
+    license: MIT
+    source_ref: c408ba031154306b571b3c70d0373b77d65807a4
+    skill: create-slide
+    skill_path: packages/core/skills/create-slide/SKILL.md
+    source_url: https://github.com/1weiho/open-slide/blob/c408ba031154306b571b3c70d0373b77d65807a4/packages/core/skills/create-slide/SKILL.md
+    install_url: https://github.com/1weiho/open-slide/blob/c408ba031154306b571b3c70d0373b77d65807a4/README.md
+    purpose_zh: 在 open-slide 工作区中把每套演示写成 React 页面组件，并配合主题、反馈标记、逐步揭示、转场和实时编辑。
+    purpose_en: Authors presentations as React page components inside an open-slide workspace, with themes, feedback markers, stepped reveals, transitions, and live editing.
+    platforms: [Claude Code, Codex, Cursor]
+    outputs: [html, pdf]
+    editability: source-editable
+    capabilities: [generation, editing, animation, framework]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+
+  - id: zl190-md-slides
+    category: html-slides
+    repository: zl190/md-slides
+    repository_url: https://github.com/zl190/md-slides
+    license: NOASSERTION
+    source_ref: e5d3f55f3e94cc1c28e6a6cd3a75af219c5a0086
+    skill: md-slides
+    skill_path: .claude/skills/md-slides/SKILL.md
+    source_url: https://github.com/zl190/md-slides/blob/e5d3f55f3e94cc1c28e6a6cd3a75af219c5a0086/.claude/skills/md-slides/SKILL.md
+    install_url: https://github.com/zl190/md-slides/blob/e5d3f55f3e94cc1c28e6a6cd3a75af219c5a0086/README.md
+    purpose_zh: 以 Markdown 为统一源文件，根据场景选择 Marp、Pandoc、Beamer、python-pptx 或 Reveal.js，生成 PDF、PPTX 和 HTML 演示。
+    purpose_en: Uses Markdown as a shared source and selects Marp, Pandoc, Beamer, python-pptx, or Reveal.js to produce PDF, PPTX, and HTML presentations.
+    platforms: [Claude Code]
+    outputs: [html, pdf, pptx]
+    editability: source-editable
+    capabilities: [generation, conversion, markdown, academic, template]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: README 声明 MIT，但核验版本没有独立 LICENSE 文件，因此许可证保守记录为 NOASSERTION。
+    notes_en: The README states MIT, but the verified revision has no standalone LICENSE file, so the license is conservatively recorded as NOASSERTION.
+
+  - id: bluedusk-html-slides
+    category: html-slides
+    repository: bluedusk/html-slides
+    repository_url: https://github.com/bluedusk/html-slides
+    license: MIT
+    source_ref: d8289f4c317905cc5d0ca265d32b791e6cb387b7
+    skill: html-slides
+    skill_path: SKILL.md
+    source_url: https://github.com/bluedusk/html-slides/blob/d8289f4c317905cc5d0ca265d32b791e6cb387b7/SKILL.md
+    install_url: https://github.com/bluedusk/html-slides/blob/d8289f4c317905cc5d0ca265d32b791e6cb387b7/README.md
+    purpose_zh: 生成单文件、零构建依赖的 HTML 演示，提供结构化 Pro 组件和创意 Vibe 主题，并支持 PPTX 或现有 HTML 转换、讲稿和浏览器内编辑。
+    purpose_en: Generates zero-build, single-file HTML decks with structured Pro components and creative Vibe themes, plus PPTX or HTML conversion, speaker notes, and in-browser editing.
+    platforms: [Claude Code, Codex, Gemini CLI, GitHub Copilot]
+    outputs: [html, pdf]
+    editability: source-editable
+    capabilities: [generation, conversion, animation, presenter-mode, speaker-notes]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: 该 Skill 依赖 open-slide 工程脚手架，不是可脱离仓库单独运行的单文件 Skill。
+    notes_en: This Skill depends on the open-slide project scaffold rather than running as a standalone single-file Skill.
+
+  - id: op7418-nanobanana-ppt-skills
+    category: image-first
+    repository: op7418/NanoBanana-PPT-Skills
+    repository_url: https://github.com/op7418/NanoBanana-PPT-Skills
+    license: NOASSERTION
+    source_ref: 0c18b9abde04ad42f4f62c7e9ead346b7bb39260
+    skill: ppt-generator-pro
+    skill_path: SKILL.md
+    source_url: https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/SKILL.md
+    install_url: https://github.com/op7418/NanoBanana-PPT-Skills/blob/0c18b9abde04ad42f4f62c7e9ead346b7bb39260/README.md
+    purpose_zh: 使用 Nano Banana 生成整页 PPT 图片，并可进一步生成页面转场、交互播放器和完整演示视频。
+    purpose_en: Generates whole-slide PPT images with Nano Banana and can add page transitions, an interactive player, and a complete presentation video.
+    platforms: [Claude Code]
+    outputs: [png, pptx, video]
+    editability: image-based
+    capabilities: [generation, image-generation, animation, video]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: 核验时未发现清晰的仓库许可证；需要 Gemini API，视频路线还需要可灵 API 与 FFmpeg。
+    notes_en: No clear repository license was found at verification time; Gemini API is required, while video workflows also need Kling API access and FFmpeg.
+
+  - id: nyxtides-ppt-image-first
+    category: image-first
+    repository: NyxTides/ppt-image-first
+    repository_url: https://github.com/NyxTides/ppt-image-first
+    license: Apache-2.0
+    source_ref: 87a300a559a2a55097fab337241218c6557bfa23
+    skill: ppt-image-first
+    skill_path: SKILL.md
+    source_url: https://github.com/NyxTides/ppt-image-first/blob/87a300a559a2a55097fab337241218c6557bfa23/SKILL.md
+    install_url: https://github.com/NyxTides/ppt-image-first/blob/87a300a559a2a55097fab337241218c6557bfa23/README.en.md
+    purpose_zh: 通过需求、内容、风格预览和规格锁定等确认关卡，把模糊主题转成图片式演示计划、整页视觉和最终 PPT。
+    purpose_en: Uses intake, content, style-preview, and specification gates to turn a vague topic into an image-first deck plan, whole-slide visuals, and a final presentation.
+    platforms: [Claude Code, Codex, OpenCode]
+    outputs: [png, pptx]
+    editability: image-based
+    capabilities: [generation, image-generation, visual-preview, review]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+
+  - id: juneyaooo-gpt-image2-ppt
+    category: image-first
+    repository: JuneYaooo/gpt-image2-ppt-skills
+    repository_url: https://github.com/JuneYaooo/gpt-image2-ppt-skills
+    license: Apache-2.0
+    source_ref: 64643a7fb4365bb21191bdcead1d767d0bbd9c27
+    skill: gpt-image2-ppt
+    skill_path: SKILL.md
+    source_url: https://github.com/JuneYaooo/gpt-image2-ppt-skills/blob/64643a7fb4365bb21191bdcead1d767d0bbd9c27/SKILL.md
+    install_url: https://github.com/JuneYaooo/gpt-image2-ppt-skills/blob/64643a7fb4365bb21191bdcead1d767d0bbd9c27/README.md
+    purpose_zh: 用 gpt-image-2 按内置风格或用户 PPTX 模板逐页生成高清图片，再封装为 16:9 PPTX，并提供可编辑重建路线。
+    purpose_en: Uses gpt-image-2 to generate high-resolution slide images from bundled styles or a user PPTX template, packages them as a 16:9 deck, and offers an editable reconstruction route.
+    platforms: [Claude Code, Codex, OpenClaw, Cursor, Hermes]
+    outputs: [png, pptx]
+    editability: image-based
+    capabilities: [generation, image-generation, template, reconstruction]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: 图片生成通常需要 OpenAI API 或宿主 Agent 的原生图片能力；模板克隆与可编辑重建还需要 PPTX 渲染后端。
+    notes_en: Image generation generally requires the OpenAI API or native host image tools; template cloning and editable reconstruction also need a PPTX rendering backend.
+
+  - id: ningzimu-codex-ppt
+    category: image-first
+    repository: ningzimu/codex-ppt-skill
+    repository_url: https://github.com/ningzimu/codex-ppt-skill
+    license: MIT
+    source_ref: 7e5437fe0edeaede717c506eb08ad1ee45cbf30f
+    skill: codex-ppt
+    skill_path: skills/codex-ppt/SKILL.md
+    source_url: https://github.com/ningzimu/codex-ppt-skill/blob/7e5437fe0edeaede717c506eb08ad1ee45cbf30f/skills/codex-ppt/SKILL.md
+    install_url: https://github.com/ningzimu/codex-ppt-skill/blob/7e5437fe0edeaede717c506eb08ad1ee45cbf30f/README_en.md
+    purpose_zh: 从文章、报告、论文和课程笔记规划大纲与视觉风格，生成整页图片并用本地脚本组装成 PPTX。
+    purpose_en: Plans outlines and visual styles from articles, reports, papers, and course notes, generates whole-slide images, and assembles them into PPTX with a local script.
+    platforms: [Codex, Claude Code, OpenClaw, Hermes]
+    outputs: [png, pptx]
+    editability: image-based
+    capabilities: [generation, image-generation, template, visual-review]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: Codex 可优先使用宿主图片工具；其他环境通常需要 gpt-image-2 或兼容图片 API。
+    notes_en: Codex can prefer native host image tools; other environments generally require gpt-image-2 or a compatible image API.

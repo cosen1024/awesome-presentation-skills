@@ -1,0 +1,28 @@
+{
+  "schema_version": 1,
+  "updated_at": "2026-07-26T09:24:35Z",
+  "source": "github-rest-api",
+  "stars": {
+    "1weiho/open-slide": 5990,
+    "JuneYaooo/gpt-image2-ppt-skills": 1105,
+    "MiniMax-AI/skills": 13164,
+    "Noi1r/powerpoint-skill": 102,
+    "NyxTides/ppt-image-first": 1171,
+    "addsumtech/slides_maker": 293,
+    "alchaincyf/huashu-design": 22018,
+    "anthropics/skills": 164210,
+    "bluedusk/html-slides": 69,
+    "codesstar/next-slide": 43,
+    "crazyykhllc-bit/CyberPPT": 1445,
+    "hugohe3/ppt-master": 41125,
+    "kdnsna/ultimate-ppt-master-skill": 146,
+    "lewislulu/html-ppt-skill": 7389,
+    "ningzimu/codex-ppt-skill": 4146,
+    "ningzimu/image-to-editable-ppt-skill": 1600,
+    "op7418/NanoBanana-PPT-Skills": 3161,
+    "op7418/guizang-ppt-skill": 22381,
+    "tristan-mcinnis/pptx-from-layouts-skill": 8,
+    "zarazhangrui/frontend-slides": 26352,
+    "zl190/md-slides": 7
+  }
+}

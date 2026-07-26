@@ -1,0 +1,37 @@
+name: Suggest a Presentation Skill
+description: Recommend a public Presentation Agent Skill for verification
+title: "Add: "
+labels: [candidate]
+body:
+  - type: input
+    id: repository
+    attributes:
+      label: Repository
+      placeholder: https://github.com/owner/repo
+    validations:
+      required: true
+  - type: input
+    id: skill
+    attributes:
+      label: Exact SKILL.md
+      placeholder: https://github.com/owner/repo/blob/<commit>/path/SKILL.md
+    validations:
+      required: true
+  - type: dropdown
+    id: category
+    attributes:
+      label: Primary route
+      options:
+        - Editable PPTX
+        - HTML Slides
+        - Image-first Presentations
+    validations:
+      required: true
+  - type: textarea
+    id: evidence
+    attributes:
+      label: First-party evidence
+      description: Installation, input/output, editability, platform, license, and recent maintenance links.
+    validations:
+      required: true
+
