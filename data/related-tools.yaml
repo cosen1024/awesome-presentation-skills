@@ -1,5 +1,11 @@
 schema_version: 1
 tools:
+  - id: ningzimu-awesome-ai-ppt
+    name: ningzimu/awesome-ai-ppt
+    type: awesome-list
+    url: https://github.com/ningzimu/awesome-ai-ppt
+    description_zh: AI PPT、PowerPoint 自动化和演示工具清单，并提供用于选型、比较和参与维护的推荐 Skill；本身不直接生成演示文稿。
+    description_en: Curated AI presentation and PowerPoint automation list with a companion Skill for selection, comparison, and contribution workflows; it does not directly generate presentations.
   - id: trsdn-mcp-server-ppt
     name: trsdn/mcp-server-ppt
     type: mcp
@@ -12,4 +18,3 @@ tools:
     url: https://github.com/zarazhangrui/beautiful-html-templates
     description_zh: HTML 演示模板集合；在确认具体可安装 Skill 前作为模板资源列出。
     description_en: Collection of HTML presentation templates, listed as a resource until an exact installable Skill is verified.
-

@@ -4,8 +4,8 @@
 
 | 项目 | 类型 | 说明 |
 |---|---|---|
+| [ningzimu/awesome-ai-ppt](https://github.com/ningzimu/awesome-ai-ppt) | Awesome List / Recommendation Skill | 收录 AI PPT 与 PowerPoint 自动化工具，并提供选型和清单维护 Skill；不直接生成演示。 |
 | [trsdn/mcp-server-ppt](https://github.com/trsdn/mcp-server-ppt) | MCP | 通过 Windows PowerPoint COM API 创建、编辑和导出演示。 |
 | [zarazhangrui/beautiful-html-templates](https://github.com/zarazhangrui/beautiful-html-templates) | Templates | HTML 演示模板集合；等待确认是否有独立可安装 Skill。 |
 
 本页不表示已经运行或安全审查这些工具。
-

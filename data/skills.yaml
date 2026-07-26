@@ -1,5 +1,5 @@
 schema_version: 1
-catalog_version: 0.3.0
+catalog_version: 0.3.1
 last_verified: 2026-07-26
 verification_scope: >-
   Public GitHub repository, exact SKILL.md entry, first-party installation
@@ -158,6 +158,29 @@ skills:
     verified_at: 2026-07-26
     notes_zh: 完整能力需要 Node.js、Pandoc、TeX、Graphviz、LibreOffice 等本地依赖。
     notes_en: The full workflow requires local dependencies including Node.js, Pandoc, TeX, Graphviz, and LibreOffice.
+
+  - id: jiadizhunine-deep-ppt
+    category: editable-pptx
+    repository: jiadizhunine/deepPPT
+    repository_url: https://github.com/jiadizhunine/deepPPT
+    license: MIT
+    source_ref: 3440832d6a0a72e1188d64ad7f2c15192207bc74
+    skill: deep-ppt
+    skill_path: SKILL.md
+    source_url: https://github.com/jiadizhunine/deepPPT/blob/3440832d6a0a72e1188d64ad7f2c15192207bc74/SKILL.md
+    install_url: https://github.com/jiadizhunine/deepPPT/blob/3440832d6a0a72e1188d64ad7f2c15192207bc74/README.md
+    purpose_zh: 面向中文或英文科研汇报、组会、答辩、journal club 和会议演示，使用 PptxGenJS 生成可编辑 PPTX，并通过包结构、版式规则和渲染预览完成确定性与视觉 QA。
+    purpose_en: Builds editable PPTX decks with PptxGenJS for Chinese or English lab meetings, defenses, journal clubs, and conferences, then applies package, layout-rule, and rendered-preview checks for deterministic and visual QA.
+    platforms: [Codex, Claude Code, OpenClaw]
+    outputs: [pptx, png]
+    editability: native-editable
+    capabilities: [generation, academic, charts, template, validation, visual-review]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-07-26
+    notes_zh: 完整渲染检查依赖 Python 3.12、Node.js、PptxGenJS，并优先使用 PowerPoint，缺失时回退到 LibreOffice 与 Poppler。
+    notes_en: Full rendered review requires Python 3.12, Node.js, and PptxGenJS, preferring PowerPoint with LibreOffice and Poppler as fallbacks.
 
   - id: ningzimu-image-to-editable-ppt
     category: editable-pptx
