@@ -1,6 +1,6 @@
 schema_version: 1
-catalog_version: 0.3.1
-last_verified: 2026-07-26
+catalog_version: 0.4.0
+last_verified: 2026-08-06
 verification_scope: >-
   Public GitHub repository, exact SKILL.md entry, first-party installation
   documentation, repository or skill-level license status, and an immutable
@@ -70,6 +70,29 @@ skills:
     verified_at: 2026-07-26
     notes_zh: 采用复杂视觉保真与主要文字可编辑的混合还原策略；复杂非文字视觉可保留为图片、SVG 或自定义几何，并要求逐页验收。
     notes_en: Uses a hybrid reconstruction strategy that preserves complex visuals while keeping primary text editable; complex non-text visuals may remain as images, SVG, or custom geometry, with page-by-page acceptance required.
+
+  - id: binaryify-open-kimi-ppt
+    category: editable-pptx
+    repository: Binaryify/open-kimi-ppt-skill
+    repository_url: https://github.com/Binaryify/open-kimi-ppt-skill
+    license: MIT
+    source_ref: 870c3e94fcd3bc3073add63c0c9fb7f3f3c5644d
+    skill: open-kimi-ppt
+    skill_path: skills/open-kimi-ppt/SKILL.md
+    source_url: https://github.com/Binaryify/open-kimi-ppt-skill/blob/870c3e94fcd3bc3073add63c0c9fb7f3f3c5644d/skills/open-kimi-ppt/SKILL.md
+    install_url: https://github.com/Binaryify/open-kimi-ppt-skill/blob/870c3e94fcd3bc3073add63c0c9fb7f3f3c5644d/README.md
+    purpose_zh: 以 YAML 格式 PPTD 作为中间层创建、编辑、复刻和读取演示，默认同时交付可继续编辑的 PPTD 项目与原生可编辑 PPTX，并支持主题、元素动画、本地浏览器编辑和导出前视觉 QA。
+    purpose_en: Uses a YAML-based PPTD intermediate format to create, edit, replicate, and read presentations, delivering both an editable PPTD project and a natively editable PPTX by default, with themes, element animation, local browser editing, and pre-export visual QA.
+    platforms: [Codex, Claude Code, Cursor, WorkBuddy]
+    outputs: [pptd, pptx]
+    editability: native-editable
+    capabilities: [generation, editing, reading, reconstruction, template, animation, visual-review]
+    verification_status: source-verified
+    runtime_status: not-tested
+    security_status: not-reviewed
+    verified_at: 2026-08-06
+    notes_zh: 这是逆向 Kimi Slides 公开格式与前端协议的非官方兼容实现；需要 Node.js 18+、Python、Chromium 和网络访问，Kimi 前端更新后可能需要同步适配。
+    notes_en: This is an unofficial compatibility implementation reverse-engineered from public Kimi Slides formats and frontend protocols; it requires Node.js 18+, Python, Chromium, and network access, and may need updates when Kimi changes its frontend.
 
   - id: anthropic-pptx
     category: editable-pptx

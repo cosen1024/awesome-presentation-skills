@@ -1,9 +1,10 @@
 {
   "schema_version": 1,
-  "updated_at": "2026-08-05T18:55:52Z",
+  "updated_at": "2026-08-06T13:50:01Z",
   "source": "github-rest-api",
   "stars": {
     "1weiho/open-slide": 6099,
+    "Binaryify/open-kimi-ppt-skill": 1113,
     "JuneYaooo/gpt-image2-ppt-skills": 1144,
     "MiniMax-AI/skills": 13238,
     "Noi1r/powerpoint-skill": 106,
